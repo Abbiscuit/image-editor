@@ -43,8 +43,9 @@ const ImageCrop = (props: ImageCropProps): JSX.Element => {
         ref={cropperRef}
       />
       <button onClick={getCropData}>button</button>
-      {cropData && (
+      {cropData.length > 1 && (
         <img
+          className={styles.img}
           src={cropData}
           width={100}
           height={100}
