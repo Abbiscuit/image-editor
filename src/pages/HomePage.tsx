@@ -1,4 +1,4 @@
-import { Dashboard } from '../components/common';
+import { Dashboard, ImageCrop, PreviewImage } from '../components/common';
 
 interface HomePageProps {}
 
@@ -13,14 +13,14 @@ const HomePage = (props: HomePageProps): JSX.Element => {
           temporibus iure esse veritatis!
         </p>
       </Dashboard.Left>
-      <Dashboard.Content>{/* main */}</Dashboard.Content>
+      <Dashboard.Content>
+        <ImageCrop />
+      </Dashboard.Content>
       <Dashboard.Right>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae
-          ipsa voluptatibus assumenda aut nesciunt facilis laborum modi minima,
-          expedita possimus consequatur excepturi nostrum eligendi quod sunt,
-          temporibus iure esse veritatis!
-        </p>
+        <section>
+          <h3>Preview</h3>
+          <PreviewImage />
+        </section>
       </Dashboard.Right>
     </Dashboard>
   );
